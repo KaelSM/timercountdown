@@ -31,5 +31,5 @@ This project was insipired by this tutorial in youtube by Web Dev SImplified, ad
 
 ## License
 
-[GNU LGPLv3](https://choosealicense.com/licenses/lgpl-3.0/)
+[MIT](https://choosealicense.com/licenses/mit)
 
