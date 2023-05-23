@@ -7,7 +7,7 @@
 
 body {
   background-color: #f2f1ed;
-  color: #de4848;
+  color: #0a28ad;
 }
 
 .flip-card {
@@ -38,7 +38,7 @@ body {
 
 .bottom,
 .flip-card .bottom-flip {
-  background-color: white;
+  background-color: #fff;
   display: flex;
   align-items: flex-end;
   border-bottom-right-radius: .1em;
@@ -97,7 +97,7 @@ body {
   }
 
   .countdown-title {
-    color: #de4848;
+    color: #e41919;
     font-size: 2rem;
     font-weight: bold;
     text-align: center;
