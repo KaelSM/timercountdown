@@ -1,11 +1,18 @@
 document.addEventListener("DOMContentLoaded", function() {
     const countDown = () => {
-      const countDate = new Date("June 8, 2023 14:00:00").getTime(); // June 8, 2023 at 2 PM
+      // This code sets the date of the next election, and selects all flip cards.
+
+  const countDate = new Date("June 8, 2023 14:00:00").getTime(); // June 8, 2023 at 2 PM
       const flipCards = document.querySelectorAll(".flip-card");
   
       setInterval(updateCountdown, 1000);
   
-      function updateCountdown() {
+      // This code updates the countdown on the screen based on the current time.
+// It calculates the time left to the event by subtracting the current time from the event time.
+// It then calculates the number of days, hours, minutes, and seconds left to the event.
+// Finally, it updates the flip cards on the screen with the values for days, hours, minutes, and seconds.
+
+function updateCountdown() {
         const now = new Date().getTime();
         const gap = countDate - now;
   
@@ -24,7 +31,18 @@ document.addEventListener("DOMContentLoaded", function() {
         flip(flipCards[7], seconds % 10);
       }
       
-      function flip(flipCard, newNumber) {
+// This function is responsible for flipping the cards. 
+// It takes two arguments, the card to be flipped, and the new number to display
+// It checks to see if the new number is the same as the current number, and if it is, it returns
+// If the new number is different, it creates two new divs, topFlip and bottomFlip
+// It then sets the text content of the top and bottom halves of the card to the current number
+// and sets the text content of the topFlip and bottomFlip divs to the new number
+// It then adds event listeners to the topFlip and bottomFlip divs
+// The "animationstart" event listener sets the text content of the top half of the card to the new number
+// The "animationend" event listeners remove the topFlip and bottomFlip divs
+// Finally, the function appends the topFlip and bottomFlip divs to the flipCard
+
+function flip(flipCard, newNumber) {
         const topHalf = flipCard.querySelector(".top");
         const startNumber = parseInt(topHalf.textContent);
         if (newNumber === startNumber) return;
