@@ -3,6 +3,14 @@
 
 Is a simple date counter that can be implemented as a widget to any webpage, for a countdown to a specific date of the end of a sale, or a big event such as a webpage for a wedding. It is made with Vue.js, HTML5 and CSS
 
+# To-do:
+- [x] Countdown flipping cards
+- [x] Work with selected date and not restart when re-loaded
+- [ ] Once is done, stop the time and send a notification
+- [ ] customize an input with button to set a date (or dropdown with calendar)
+- [ ] once timer is done  and the notification is closed, prompt the user for a new date
+
+
 ## Set Date
 
 To set your custom date, you just need to modify one line in the JS file
