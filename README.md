@@ -8,7 +8,9 @@ Is a simple date counter that can be implemented as a widget to any webpage, for
 - [x] Work with selected date and not restart when re-loaded
 - [ ] Once is done, stop the time and send a notification
 - [ ] customize an input with button to set a date (or dropdown with calendar)
+- [ ] start the counter and create a subscribe to be emailed about days left 
 - [ ] once timer is done  and the notification is closed, prompt the user for a new date
+- [ ] custumize the email  
 
 
 ## Set Date
