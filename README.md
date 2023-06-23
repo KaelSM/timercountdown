@@ -41,8 +41,10 @@ to discuss what you would like to change.
 ## Credits
 This project was insipired by this tutorial in youtube by Web Dev SImplified, added functionality so it didnt only work with minutes and seconds, but with an actual date and kept the time even if the page is refreshed.
 
-[video Link](https://www.youtube.com/watch?v=p_6IuhmBsfc)
-Confetti library is used from [here](https://confetti.js.org/more.html) 
+-[video Link](https://www.youtube.com/watch?v=p_6IuhmBsfc)
+
+-Confetti library is used from [here](https://confetti.js.org/more.html) 
+
 ## License
 
 [MIT](https://choosealicense.com/licenses/mit)
