@@ -81,7 +81,7 @@ function flip(flipCard, newNumber) {
       }
 
       function displayConfettiAndNotification() {
-        const confetti = document.getElementById("confetti");
+        const confetti = document.getElementById("confetti-container");
         const notification = document.getElementById("notification");
   
         confetti.style.display = "block";
