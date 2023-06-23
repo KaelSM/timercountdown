@@ -1,6 +1,6 @@
 document.addEventListener("DOMContentLoaded", function() {
   const countDown = () => {
-    const countDate = new Date("June 22, 2023 16:36:00").getTime();
+    const countDate = new Date("June 23, 2023 11:15:00").getTime();
     const flipCards = document.querySelectorAll(".flip-card");
     let isCountdownFinished = false;
 
@@ -59,21 +59,54 @@ document.addEventListener("DOMContentLoaded", function() {
       flipCard.append(topFlip, bottomFlip);
     }
 
+    
     function displayConfettiAndNotification() {
       const confettiContainer = document.getElementById("confetti-container");
       const notification = document.getElementById("notification");
-
+    
       confettiContainer.style.display = "block";
-      confetti({
-        particleCount: 100,
-        spread: 160,
-        origin: { y: 0.6 }
-      });
-
-      setTimeout(function() {
-        notification.style.display = "block";
-      }, 3000);
+      notification.style.display = "block";
+    
+      const duration = 15 * 1000; // Duration of the confetti animation in milliseconds
+      const defaults = { startVelocity: 30, spread: 360, ticks: 60, zIndex: 0 };
+    
+      function randomInRange(min, max) {
+        return Math.random() * (max - min) + min;
+      }
+    
+      function startConfettiAnimation() {
+        const animationEnd = Date.now() + duration;
+    
+        const interval = setInterval(function() {
+          const timeLeft = animationEnd - Date.now();
+    
+          if (timeLeft <= 0) {
+            clearInterval(interval);
+            startConfettiAnimation(); // Restart the confetti animation
+            return;
+          }
+    
+          const particleCount = 50 * (timeLeft / duration);
+    
+          // since particles fall down, start a bit higher than random
+          confetti(
+            Object.assign({}, defaults, {
+              particleCount,
+              origin: { x: randomInRange(0.1, 0.3), y: Math.random() - 0.2 },
+            })
+          );
+          confetti(
+            Object.assign({}, defaults, {
+              particleCount,
+              origin: { x: randomInRange(0.7, 0.9), y: Math.random() - 0.2 },
+            })
+          );
+        }, 250);
+      }
+    
+      startConfettiAnimation(); // Start the initial confetti animation
     }
+    
 
     const interval = setInterval(updateCountdown, 1000);
     updateCountdown();

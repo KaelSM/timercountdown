@@ -6,79 +6,80 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Countdown Timer</title>
     <link rel="stylesheet" href="style.css">
-    <script src="https://cdn.jsdelivr.net/npm/canvas-confetti@1.1.0/dist/confetti.min.js"></script>
-    <script src="countdown.js" defer></script>
+    <script src="https://cdn.jsdelivr.net/npm/tsparticles-confetti@2.10.1/tsparticles.confetti.bundle.min.js"></script>
   </head>
-<body>
-  <h1 class="countdown-title">Countdown to pick up Krasus</h1>
+  <body>
+    <h1 class="countdown-title">Countdown to pick up Krasus</h1>
 
- <!-- This code creates the HTML elements for the days segment
- and adds the classes and attributes needed for the flip cards --> 
-
- <div class="container">
-    <div class="container-segment">
-      <div class="segment-title">Days</div>
-      <div class="segment">
-        <div class="flip-card" data-days-tens>
-          <div class="top">2</div>
-          <div class="bottom">2</div>
+    <div class="container">
+      <!-- Days segment -->
+      <div class="container-segment">
+        <div class="segment-title">Days</div>
+        <div class="segment">
+          <div class="flip-card" data-days-tens>
+            <div class="top">2</div>
+            <div class="bottom">2</div>
+          </div>
+          <div class="flip-card" data-days-ones>
+            <div class="top">4</div>
+            <div class="bottom">4</div>
+          </div>
         </div>
-        <div class="flip-card" data-days-ones>
-          <div class="top">4</div>
-          <div class="bottom">4</div>
+      </div>
+
+      <!-- Hours segment -->
+      <div class="container-segment">
+        <div class="segment-title">Hours</div>
+        <div class="segment">
+          <div class="flip-card" data-hours-tens>
+            <div class="top">2</div>
+            <div class="bottom">2</div>
+          </div>
+          <div class="flip-card" data-hours-ones>
+            <div class="top">4</div>
+            <div class="bottom">4</div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Minutes segment -->
+      <div class="container-segment">
+        <div class="segment-title">Minutes</div>
+        <div class="segment">
+          <div class="flip-card" data-minutes-tens>
+            <div class="top">0</div>
+            <div class="bottom">0</div>
+          </div>
+          <div class="flip-card" data-minutes-ones>
+            <div class="top">0</div>
+            <div class="bottom">0</div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Seconds segment -->
+      <div class="container-segment">
+        <div class="segment-title">Seconds</div>
+        <div class="segment">
+          <div class="flip-card" data-seconds-tens>
+            <div class="top">0</div>
+            <div class="bottom">0</div>
+          </div>
+          <div class="flip-card" data-seconds-ones>
+            <div class="top">0</div>
+            <div class="bottom">0</div>
+          </div>
         </div>
       </div>
     </div>
-    <!-- This code controls the flip cards that display the hours in the timer.-->
 
-<div class="container-segment">
-      <div class="segment-title">Hours</div>
-      <div class="segment">
-        <div class="flip-card" data-hours-tens>
-          <div class="top">2</div>
-          <div class="bottom">2</div>
-        </div>
-        <div class="flip-card" data-hours-ones>
-          <div class="top">4</div>
-          <div class="bottom">4</div>
-        </div>
-      </div>
-    </div>
-    <!-- This code creates the minutes display. -->
+    <div id="confetti-container"></div>
 
-<div class="container-segment">
-      <div class="segment-title">Minutes</div>
-      <div class="segment">
-        <div class="flip-card" data-minutes-tens>
-          <div class="top">0</div>
-          <div class="bottom">0</div>
-        </div>
-        <div class="flip-card" data-minutes-ones>
-          <div class="top">0</div>
-          <div class="bottom">0</div>
-        </div>
-      </div>
+    <div id="notification" class="notification">
+      <h2>Congratulations!</h2>
+      <p>You have reached the end of the countdown.</p>
     </div>
-    <!-- This code creates a segment for the seconds section of the timer on the page.-->
-<div class="container-segment">
-      <div class="segment-title">Seconds</div>
-      <div class="segment">
-        <div class="flip-card" data-seconds-tens>
-          <div class="top">0</div>
-          <div class="bottom">0</div>
-        </div>
-        <div class="flip-card" data-seconds-ones>
-          <div class="top">0</div>
-          <div class="bottom">0</div>
-        </div>
-      </div>
-    </div>
-  </div>
-  <div id="confetti-container"></div>
 
-  <div id="notification" class="notification">
-    <h2>Congratulations!</h2>
-    <p>You have reached the end of the countdown.</p>
-  </div>
-</body>
+    <script src="countdown.js"></script>
+  </body>
 </html>
