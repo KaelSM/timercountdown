@@ -63,13 +63,28 @@ document.addEventListener("DOMContentLoaded", function() {
     function displayConfettiAndNotification() {
       const confettiContainer = document.getElementById("confetti-container");
       const notification = document.getElementById("notification");
+      const closeButton = document.getElementById("close-button");
+      const homeButton = document.getElementById("home-button");
+
     
       confettiContainer.style.display = "block";
       notification.style.display = "block";
     
       const duration = 15 * 1000; // Duration of the confetti animation in milliseconds
       const defaults = { startVelocity: 30, spread: 360, ticks: 60, zIndex: 0 };
-    
+
+      closeButton.addEventListener("click", function() {
+        // Close the notification and close the tab
+        notification.style.display = "none";
+        window.close();
+      });
+      
+      homeButton.addEventListener("click", function() {
+        // Go back to the home page
+        window.location.href = "home.html"; // Replace "home.html" with the actual URL of your home page
+      });
+
+
       function randomInRange(min, max) {
         return Math.random() * (max - min) + min;
       }
