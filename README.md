@@ -7,7 +7,8 @@ Is a simple date counter that can be implemented as a widget to any webpage, for
 - [x] Countdown flipping cards
 - [x] Work with selected date and not restart when re-loaded
 - [x] Once is done, stop the time and send a notification
-- [ ] customize an input with button to set a date (or dropdown with calendar)
+- [x] customize an input with button to set a date (or dropdown with calendar)
+- [ ] add backend to connect the applications
 - [ ] home page to as well put a subject line and title notification to act with the subject and title as well as the main page
 - [ ] start the counter and create a subscribe to be emailed about days left
 - [ ] email notification to user once timer is done
@@ -29,10 +30,24 @@ const countDate = new Date("June 8, 2023 14:00:00").getTime();
 
 You can add the html as it is and the js with your date modification to your webpage, and it will work as expected, if size needs to be updated to be smaller, just needs to be changed in the css with it's container, same with colors, it is highly customizable.
 
-## Future
-Planning to implement an animation/notification once reaching the date selected for the countdown. 
-As well as a subscribe option for the user to be email/text with daily reminders(optional) or just notifying when the date is near, and then on the final countdown as well.
+When reaching the end of the countdown, a notification window will appear and prompt a text congratulating, as well as using a js library to throw confetti when reaching the end.
+
+Also added a home page where the user can put their email (if they want) and requiered to put subject line and datepicker with hours that will set the application subject and date.
+
+ using python as backend to run the enviroment use
  
+ ```bash
+source venv/bin/activate
+```
+to start it and then for the server to run: 
+
+ ```bash
+python manager.py
+```
+
+
+keep in mind you need flask for python to use this.
+
 ## Contributing
 
 Pull requests are welcome. For major changes, please open an issue first
