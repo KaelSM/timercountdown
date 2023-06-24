@@ -1,4 +1,5 @@
 var current = null;
+
 document.querySelector('#email').addEventListener('focus', function(e) {
   if (current) current.pause();
   current = anime({
@@ -15,7 +16,8 @@ document.querySelector('#email').addEventListener('focus', function(e) {
     }
   });
 });
-document.querySelector('#password').addEventListener('focus', function(e) {
+
+document.querySelector('#subject').addEventListener('focus', function(e) {
   if (current) current.pause();
   current = anime({
     targets: 'path',
@@ -31,7 +33,8 @@ document.querySelector('#password').addEventListener('focus', function(e) {
     }
   });
 });
-document.querySelector('#submit').addEventListener('focus', function(e) {
+
+document.querySelector('#datetime').addEventListener('focus', function(e) {
   if (current) current.pause();
   current = anime({
     targets: 'path',
@@ -45,5 +48,10 @@ document.querySelector('#submit').addEventListener('focus', function(e) {
       duration: 700,
       easing: 'easeOutQuart'
     }
+  });
+
+  document.querySelector('#submit').addEventListener('click', function(e) {
+    e.preventDefault();
+    window.location.href = '/templates/index.html';
   });
 });
