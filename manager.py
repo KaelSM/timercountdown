@@ -1,16 +1,19 @@
-from flask import Flask, render_template
+from flask import Flask, render_template, request, redirect, url_for
 
 app = Flask(__name__)
 
 @app.route('/')
 def home():
-    subject = "Countdown to pick up Krasus"  # Set the subject here
-    return render_template('home.html', subject=subject)
+    return render_template('home.html')
 
-@app.route('/countdown')
-def countdown():
-    date = "June 23, 2023 11:15:00"  # Set the date and time here
-    return render_template('countdown.html', date=date)
+@app.route('/submit', methods=['POST'])
+def submit():
+    subject = request.form.get('subject')
+    return redirect(url_for('index'))
+
+@app.route('/index')
+def index():
+    return render_template('index.html')
 
 if __name__ == '__main__':
-    app.run(debug=True)
+    app.run()
