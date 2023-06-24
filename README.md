@@ -39,6 +39,12 @@ Also added a home page where the user can put their email (if they want) and req
  ```bash
 source venv/bin/activate
 ```
+to start it and then for the server to run: 
+
+ ```bash
+python manager.py
+```
+
 
 keep in mind you need flask for python to use this.
 
