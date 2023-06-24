@@ -90,26 +90,32 @@ svg {
 }
 path {
   fill: none;
-  stroke: url(#linearGradient);;
   stroke-width: 4;
   stroke-dasharray: 240 1386;
 }
 .form {
-  margin: 40px;
-  position: absolute;
+  margin: 10px;
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 }
+
 label {
   color:  #c2c2c5;
   display: block;
   font-size: 14px;
   height: 16px;
-  margin-top: 20px;
+  margin-top: 10px; /* Decrease the margin-top value */
   margin-bottom: 5px;
+  text-align: center;
 }
+
+
 input {
   background: transparent;
   border: 0;
-  color: #f2f2f2;
+  color: #666768;
   font-size: 20px;
   height: 30px;
   line-height: 30px;
@@ -152,7 +158,8 @@ input::-moz-focus-inner {
 }
 
 #datetime,
-#email {
+#email
+#subject {
   color: #666768;
 }
 

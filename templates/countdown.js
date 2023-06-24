@@ -1,6 +1,6 @@
 document.addEventListener("DOMContentLoaded", function() {
   const countDown = () => {
-    const countDate = new Date("June 23, 2023 11:15:00").getTime();
+    const countDate = new Date("{{ date }}").getTime();
     const flipCards = document.querySelectorAll(".flip-card");
     let isCountdownFinished = false;
 
