@@ -19,15 +19,20 @@ open to any solution about fixing any bug or issue as well as suggestions on wha
 
 ## Installation
 - Clone the repository to your local machine.
-- nstall the required dependencies by running `pip install -r requirements.txt`.
+- Install the required dependencies by running `pip install -r requirements.txt`.
+- Run this in your terminal to activate:
+  
   ```bash
   source venv/bin/activate
   ```
-- Run the application by executing
+  
+- Run the application by executing:
+ 
   ```bash
   python manager.py
   ```
   in your terminal.
+  
 - Open your web browser and navigate to `http://localhost:5000`.
 
 ## Usage
