@@ -52,6 +52,7 @@ document.querySelector('#datetime').addEventListener('focus', function(e) {
 
   document.querySelector('#submit').addEventListener('click', function(e) {
     e.preventDefault();
-    window.location.href = '/templates/index.html';
+    window.location.href = '/index';  // Use Flask route instead of direct file path
   });
+  
 });

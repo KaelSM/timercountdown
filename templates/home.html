@@ -5,8 +5,8 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Countdown Timer</title>
-    <link rel="stylesheet" href="../static/home.css">
-  </head>
+    <link rel="stylesheet" href="{{ url_for('static', filename='home.css') }}">
+    </head>
   <body>
     <div class="page">
       <div class="container">
@@ -38,13 +38,15 @@
             <path d="m 40,120.00016 239.99984,-3.2e-4 c 0,0 24.99263,0.79932 25.00016,35.00016 0.008,34.20084 -25.00016,35 -25.00016,35 h -239.99984 c 0,-0.0205 -25,4.01348 -25,38.5 0,34.48652 25,38.5 25,38.5 h 215 c 0,0 20,-0.99604 20,-25 0,-24.00396 -20,-25 -20,-25 h -190 c 0,0 -20,1.71033 -20,25 0,24.00396 20,25 20,25 h 168.57143" />
           </svg>
           <div class="form">
-            <label for="email">Email</label>
-            <input type="email" id="email">
-            <label for="subject">Subject</label>
-            <input type="text" id="subject">
-            <label for="datetime">Date and Time</label>
-            <input type="datetime-local" id="datetime">
-            <input type="submit" id="submit" value="Submit" formaction="index.html">
+            <form action="{{ url_for('submit') }}" method="POST">
+              <label for="email">Email</label>
+              <input type="email" id="email" name="em">
+              <label for="subject">Subject</label>
+              <input type="text" id="subject" name="sub">
+              <label for="datetime">Date and Time</label>
+              <input type="datetime-local" id="datetime" name="DT">
+              <button type="submit" id="submit">Submit</button>
+            </form>
           </div>
         
         </div>
@@ -55,6 +57,6 @@
     <!--python manage.py runserver-->
 
     <script src="https://cdnjs.cloudflare.com/ajax/libs/animejs/2.0.2/anime.min.js"></script>
-    <script src="../static/home.js"></script>
+    <script src="{{ url_for('static', filename='home.js') }}"></script>
   </body>
 </html>
