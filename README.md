@@ -1,15 +1,15 @@
 
 # Timer Flip Cards Animated Date Count Down
 
-Is a simple date counter that can be implemented as a widget to any webpage, for a countdown to a specific date of the end of a sale, or a big event such as a webpage for a wedding. It is made with Vue.js, HTML5 and CSS
+This is a web application that displays a countdown timer for a specific event and celebrates the event with confetti when the timer reaches zero. The application is built using JavaScript and the tsparticles-confetti library to handle the countdown timer and confetti functionality.
 
 # To-do:
 - [x] Countdown flipping cards
 - [x] Work with selected date and not restart when re-loaded
 - [x] Once is done, stop the time and send a notification
 - [x] customize an input with button to set a date (or dropdown with calendar)
-- [ ] add backend to connect the applications
-- [ ] home page to as well put a subject line and title notification to act with the subject and title as well as the main page
+- [x] add backend to connect the applications
+- [x] home page to as well put a subject line and title notification to act with the subject and title as well as the main page
 - [ ] start the counter and create a subscribe to be emailed about days left
 - [ ] email notification to user once timer is done
 - [ ] once timer is done  and the notification is closed, prompt the user for a new date
@@ -17,6 +17,11 @@ Is a simple date counter that can be implemented as a widget to any webpage, for
 
 open to any solution about fixing any bug or issue as well as suggestions on what to add next
 
+## Installation
+- Clone the repository to your local machine.
+- nstall the required dependencies by running pip install -r requirements.txt.
+- Run the application by executing python manager.py in your terminal.
+- Open your web browser and navigate to http://localhost:5000.
 
 ## Set Date
 
@@ -28,13 +33,12 @@ const countDate = new Date("June 8, 2023 14:00:00").getTime();
 
 ## Usage
 
-You can add the html as it is and the js with your date modification to your webpage, and it will work as expected, if size needs to be updated to be smaller, just needs to be changed in the css with it's container, same with colors, it is highly customizable.
-
-When reaching the end of the countdown, a notification window will appear and prompt a text congratulating, as well as using a js library to throw confetti when reaching the end.
-
-Also added a home page where the user can put their email (if they want) and requiered to put subject line and datepicker with hours that will set the application subject and date.
-
- using python as backend to run the enviroment use
+- Open the 'home.html' file in your web browser.
+- Enter the name of the event you want to countdown to in the input field.
+- Select the date and time of the event using the date and time picker.
+- Click the "Start Countdown" button to start the countdown timer.
+- The countdown timer will display the remaining time until the event in days, hours, minutes, and seconds.
+- When the countdown timer reaches zero, confetti will rain down on the screen to celebrate the event.
  
  ```bash
 source venv/bin/activate
@@ -48,10 +52,13 @@ python manager.py
 
 keep in mind you need flask for python to use this.
 
+## Customization
+
+You can customize the appearance of the countdown timer and confetti by modifying the CSS styles in 'style.css' and the JavaScript code in 'countdown.js'.
+
 ## Contributing
 
-Pull requests are welcome. For major changes, please open an issue first
-to discuss what you would like to change.
+If you would like to contribute to this project, please fork the repository and submit a pull request with your changes.
 
 ## Credits
 This project was insipired by this tutorial in youtube by Web Dev SImplified, added functionality so it didnt only work with minutes and seconds, but with an actual date and kept the time even if the page is refreshed.
