@@ -10,11 +10,13 @@ def home():
 def submit():
     subject = request.form.get('subject')
     datetime = request.form.get('datetime')
-    return redirect(url_for('index'))
+    return redirect(url_for('index', subject=subject, date=datetime))
 
 @app.route('/index', methods=['GET'])
 def index():
-    return render_template('index.html')
+    subject = request.args.get('subject')
+    date = request.args.get('date')
+    return render_template('index.html', subject=subject, date=date)
 
 if __name__ == '__main__':
     app.run(debug=True)

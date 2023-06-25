@@ -1,58 +1,11 @@
-var current = null;
-
-document.querySelector('#email').addEventListener('focus', function(e) {
-  if (current) current.pause();
-  current = anime({
-    targets: 'path',
-    strokeDashoffset: {
-      value: 0,
-      duration: 700,
-      easing: 'easeOutQuart'
-    },
-    strokeDasharray: {
-      value: '240 1386',
-      duration: 700,
-      easing: 'easeOutQuart'
-    }
-  });
-});
-
-document.querySelector('#subject').addEventListener('focus', function(e) {
-  if (current) current.pause();
-  current = anime({
-    targets: 'path',
-    strokeDashoffset: {
-      value: -336,
-      duration: 700,
-      easing: 'easeOutQuart'
-    },
-    strokeDasharray: {
-      value: '240 1386',
-      duration: 700,
-      easing: 'easeOutQuart'
-    }
-  });
-});
-
-document.querySelector('#datetime').addEventListener('focus', function(e) {
-  if (current) current.pause();
-  current = anime({
-    targets: 'path',
-    strokeDashoffset: {
-      value: -730,
-      duration: 700,
-      easing: 'easeOutQuart'
-    },
-    strokeDasharray: {
-      value: '530 1386',
-      duration: 700,
-      easing: 'easeOutQuart'
-    }
-  });
-
-  document.querySelector('#submit').addEventListener('click', function(e) {
-    e.preventDefault();
-    window.location.href = '/index';  // Use Flask route instead of direct file path
-  });
-  
+document.addEventListener('DOMContentLoaded', function() {
+  var submitButton = document.querySelector('#submit');
+  if (submitButton) {
+    submitButton.addEventListener('click', function(e) {
+      e.preventDefault();
+      var subject = document.querySelector('#subject').value;
+      var datetime = document.querySelector('#datetime').value;
+      window.location.href = '/index?subject=' + encodeURIComponent(subject) + '&datetime=' + encodeURIComponent(datetime);
+    });
+  }
 });

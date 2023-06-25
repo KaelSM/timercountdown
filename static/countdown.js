@@ -1,6 +1,10 @@
 document.addEventListener("DOMContentLoaded", function() {
+  const urlParams = new URLSearchParams(window.location.search);
+  const subject = urlParams.get('subject');
+  const date = urlParams.get('datetime');
+ 
   const countDown = () => {
-    const countDate = new Date("{{ date }}").getTime();
+    const countDate = new Date("{{ datet }}").getTime();
     const flipCards = document.querySelectorAll(".flip-card");
     let isCountdownFinished = false;
 
