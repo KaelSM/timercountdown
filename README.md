@@ -13,7 +13,7 @@ This is a web application that displays a countdown timer for a specific event a
 - [ ] start the counter and create a subscribe to be emailed about days left
 - [ ] email notification to user once timer is done
 - [ ] once timer is done  and the notification is closed, prompt the user for a new date
-- [ ] custumize the email
+
 
 open to any solution about fixing any bug or issue as well as suggestions on what to add next
 
