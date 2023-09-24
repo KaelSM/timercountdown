@@ -10,7 +10,7 @@ This is a web application that displays a countdown timer for a specific event a
 - [x] customize an input with button to set a date (or dropdown with calendar)
 - [x] add backend to connect the applications
 - [x] home page to as well put a subject line and title notification to act with the subject and title as well as the main page
-- [ ] start the counter and create a subscribe to be emailed about days left
+- [ ] register the email to a db
 - [ ] email notification to user once timer is done
 - [ ] once timer is done  and the notification is closed, prompt the user for a new date
 
