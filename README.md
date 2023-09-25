@@ -10,9 +10,11 @@ This is a web application that displays a countdown timer for a specific event a
 - [x] customize an input with button to set a date (or dropdown with calendar)
 - [x] add backend to connect the applications
 - [x] home page to as well put a subject line and title notification to act with the subject and title as well as the main page
-- [ ] register the email to a db
-- [ ] email notification to user once timer is done
-- [ ] once timer is done  and the notification is closed, prompt the user for a new date
+- [x] register the email to a db
+- [x] email notification to user once timer is done
+- [x] once timer is done  and the notification is closed, prompt the user for a new date
+- [ ] perform tests
+- [ ] ensure functions as expected
 
 
 open to any solution about fixing any bug or issue as well as suggestions on what to add next
