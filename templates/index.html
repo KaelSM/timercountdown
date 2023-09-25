@@ -1,17 +1,17 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Countdown Timer</title>
-    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
-    <script src="https://cdn.jsdelivr.net/npm/tsparticles-confetti@2.10.1/tsparticles.confetti.bundle.min.js"></script>
-  </head>
-  <body>
-    <h1 class="countdown-title">Countdown for {{ subject }}</h1>
-    
-    <div class="container">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Countdown Timer</title>
+  <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+  <script src="https://cdn.jsdelivr.net/npm/tsparticles-confetti@2.10.1/tsparticles.confetti.bundle.min.js"></script>
+</head>
+<body>
+<h1 class="countdown-title">Countdown for {{ subject }}</h1>
+
+<div class="container">
       <!-- Days segment -->
       <div class="container-segment">
         <div class="segment-title">Days</div>
@@ -73,18 +73,24 @@
       </div>
     </div>
 
-    <div id="confetti-container"></div>
+<div id="confetti-container"></div>
 
-    <div id="notification" class="notification">
-      <div class="notification-header">
-        <h2>Congratulations!</h2>
-        <button id="close-button">&#10006;</button>
-      </div>
-      <p>You have reached the end of the countdown.</p>
-      <button id="home-button">Home</button>
-    </div>
-    
-    <script src="{{ url_for('static', filename='home.js') }}"></script>
-    <script src="{{ url_for('static', filename='countdown.js') }}"></script>
+<div id="notification" class="notification">
+  <div class="notification-header">
+    <h2>Congratulations!</h2>
+    <button id="close-button">&#10006;</button>
+  </div>
+  <p>You have reached the end of the countdown.</p>
+  <button id="home-button">Home</button>
+</div>
+
+<script src="{{ url_for('static', filename='home.js') }}"></script>
+<script src="{{ url_for('static', filename='countdown.js') }}"></script>
 </body>
 </html>
+
+
+
+
+
+
