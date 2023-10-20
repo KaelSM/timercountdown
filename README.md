@@ -1,6 +1,9 @@
 
 # Timer Flip Cards Animated Date Count Down
 
+![timerflip](https://github.com/KaelSM/timercountdown/assets/113145289/7426b3ac-b2a7-4fb1-b8ed-68e2c7ef137d)
+
+
 This is a web application that displays a countdown timer for a specific event and celebrates the event with confetti when the timer reaches zero. The application is built using JavaScript and the `confetti.js` library to handle the countdown timer and confetti functionality.
 
 # To-do:
